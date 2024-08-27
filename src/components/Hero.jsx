@@ -49,9 +49,9 @@ const Hero = () => {
                             opacity:1,
                         }}
                         transition={{ duration: 1}}
-                        whileHover={{ scale: 1.2 }}
+                        whileHover={{ scale: 1.1 }}
                         className="rounded-full bg-gradient-to-r from-indigo-300 via-purple-500 to-pink-500" 
-                        width="500" 
+                        width={400} 
                         src={profilePic} 
                         alt="Reyniel Obut" />
                 </div>
