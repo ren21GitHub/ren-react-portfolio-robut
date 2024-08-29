@@ -74,27 +74,27 @@ const Navbar2 = () => {
       zIndex:100,
     }}>
     <Disclosure as="nav" className="mb-8 bg-slate-900 bg-opacity-80">
-      <div className="container mx-auto sm:px-6 lg:px-8">
+      <div className="container mx-auto">
         <div className="relative flex h-16 items-center justify-between">
-          <div className="absolute right-0 mr-6 flex items-center sm:hidden">
+          <div className={`absolute right-0 mr-6 flex items-center lg:hidden`}>
             {/* Mobile menu button*/}
-            <DisclosureButton onClick={() => setIsOpen(!isOpen)} /* Toggle the panel */ className="group inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+            <DisclosureButton onClick={() => setIsOpen(!isOpen)} /* Toggle the panel */ className={`group inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white`}>
               <span className="absolute -inset-0.5" />
               <span className="sr-only">Open main menu</span>
               <Bars3Icon aria-hidden="true" className={`block h-6 w-6`} />
               {/* <XMarkIcon aria-hidden="true" className={`${isOpen ? "hidden":"block"} h-6 w-6`} /> */}
             </DisclosureButton>
           </div>
-          <div className="flex w-2/4 -ml-2 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-center">
+          <div className="flex w-full items-center mx-6 sm:items-stretch sm:justify-start">
+            <div className="w-2/4  flex flex-shrink-0 items-center">
               <img
                 alt="Your Company"
                 src={logo}
                 className="h-14"
               />
             </div>
-            <div className="hidden absolute pt-2 right-0 flex items-center sm:ml-6 sm:block">
-              <div className="flex space-x-4">
+            <div className={`w-3/4 hidden absolute pt-2 right-0 flex items-center lg:block`}>
+              <div className="flex space-x-4 justify-end">
                 {navigation.map((item) => (
                   <Link
                     // key={item.name}
