@@ -13,7 +13,7 @@ const About = () => {
         About
         <span className="text-neutral-500"> Me</span>
       </motion.h1>
-      <div className="flex flex-wrap lg:justify-center">
+      <div className="flex flex-wrap items-center lg:justify-center">
         <motion.div 
             initial={{x:-100, opacity:0}}
             whileInView={{x:0, opacity:1}}
@@ -26,7 +26,7 @@ const About = () => {
         </motion.div>
 
         {ABOUT_TEXT.map((about, index) => (
-          <div className='w-full max-w-xl text-sm lg:w-2/4'>
+          <div className='flex flex-wrap lg:w-2/4 md:w-4/4 sm:w-screen text-sm items-center justify-center'>
                 <motion.div 
                   initial={{x:100, opacity:0}}
                   whileInView={{x:0, opacity:1}} 

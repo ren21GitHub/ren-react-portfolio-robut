@@ -35,12 +35,12 @@ const Hero = () => {
                         variants={container(1)}
                         initial="hidden"
                         whileInView="visible"
-                        className="my-2 max-w-xl py-6 font-light tracking-tighter text-justify">
+                        className="my-2 py-6 font-light tracking-tighter text-justify">
                         {HERO_CONTENT}
                     </motion.p>
                 </div>
             </div>
-            <div className="w-full lg:w-1/2 lg:p-8">
+            <div className="w-full lg:w-1/2">
                 <div className="flex items-center justify-center">
                     <motion.img 
                         initial={{x:100, opacity:0}}
