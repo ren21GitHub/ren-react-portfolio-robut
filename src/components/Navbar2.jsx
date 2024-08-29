@@ -1,9 +1,11 @@
 import { Disclosure, DisclosureButton, DisclosurePanel} from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import logo from '../assets/RO5555.png'
+import defaultLogo from '../assets/RO5555.png'
+import hoverLogo from '../assets/RO5555colored.png'
 import { Link } from 'react-scroll';
 import Headroom from 'react-headroom';
 import { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 
 
 const navigation = [
@@ -65,6 +67,16 @@ const Navbar2 = () => {
     };
   }, []);
 
+  const [logoSrc, setLogoSrc] = useState(defaultLogo);
+
+  const handleMouseEnter = () => {
+    setLogoSrc(hoverLogo); // Change logo on hover
+  };
+
+  const handleMouseLeave = () => {
+    setLogoSrc(defaultLogo); // Revert to original logo when not hovering
+  };
+
   return (
     <Headroom style={{
       webkitTransition: 'all .5s ease-in-out',
@@ -76,22 +88,33 @@ const Navbar2 = () => {
     <Disclosure as="nav" className="mb-8 bg-slate-900 bg-opacity-80">
       <div className="container mx-auto">
         <div className="relative flex h-16 items-center justify-between">
-          <div className={`absolute right-0 mr-6 flex items-center lg:hidden`}>
+          <motion.div 
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 300, damping: 17 }}
+            className={`absolute right-0 mr-6 flex items-center lg:hidden`}>
             {/* Mobile menu button*/}
-            <DisclosureButton onClick={() => setIsOpen(!isOpen)} /* Toggle the panel */ className={`group inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white`}>
+            <DisclosureButton onClick={() => setIsOpen(!isOpen)} /* Toggle the panel */ className={`group inline-flex items-center justify-center rounded-md p-2 hover:text-purple-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-400`}>
               <span className="absolute -inset-0.5" />
               <span className="sr-only">Open main menu</span>
               <Bars3Icon aria-hidden="true" className={`block h-6 w-6`} />
               {/* <XMarkIcon aria-hidden="true" className={`${isOpen ? "hidden":"block"} h-6 w-6`} /> */}
             </DisclosureButton>
-          </div>
+          </motion.div>
           <div className="flex w-full items-center mx-6 sm:items-stretch sm:justify-start">
             <div className="w-2/4  flex flex-shrink-0 items-center">
-              <img
-                alt="Your Company"
-                src={logo}
-                className="h-14"
-              />
+              <a href="https://reynielobut.vercel.app/">
+                <motion.img
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  alt="Your Company"
+                  src={logoSrc}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  className="h-14"
+                />
+              </a>
             </div>
             <div className={`w-3/4 hidden absolute pt-2 right-0 flex items-center lg:block`}>
               <div className="flex space-x-4 justify-end">

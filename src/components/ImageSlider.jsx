@@ -137,8 +137,12 @@ const ImageSlider = () => {
         </div>
       </div>
       
-      <button className={`flex text-white rounded text-1xl ${height ? "mt-[350px]" : "mt-[550px]"} bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-purple-500  py-2 px-4`} onClick={handleNext} >Next <RxArrowTopRight className="pl-1 text-2xl hover:rotate-45 duration-100" />
-      </button>
+      <motion.button
+       whileHover={{ scale: 1.1 }}
+       whileTap={{ scale: 0.9 }}
+       transition={{ type: "spring", stiffness: 300, damping: 17 }}
+       className={`group relative flex text-white rounded text-1xl ${height ? "mt-[350px]" : "mt-[550px]"} bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-purple-500  py-2 px-4`} onClick={handleNext} >Next <RxArrowTopRight className="pl-1 text-2xl hover:rotate-45 duration-100" />
+      </motion.button>
 
     </div>
   )
