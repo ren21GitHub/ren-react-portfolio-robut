@@ -1,5 +1,5 @@
 import {TiHtml5} from "react-icons/ti";
-import { FaCss3Alt, FaPhp } from "react-icons/fa";
+import { FaBootstrap, FaCss3Alt, FaPhp } from "react-icons/fa";
 import {RiTailwindCssFill} from "react-icons/ri";
 import { IoLogoJavascript } from "react-icons/io";
 import {RiReactjsLine} from "react-icons/ri";
@@ -40,7 +40,7 @@ const Technologies = () => {
                 className="flex flex-wrap items-center justify-center gap-x-2 gap-y-5">
 
                 <motion.div 
-                    variants={iconVariants(2.5)}
+                    variants={iconVariants(2)}
                     initial="initial"
                     animate="animate"
                     whileHover={{scale: 1.3}}
@@ -48,9 +48,8 @@ const Technologies = () => {
                     <TiHtml5 className="text-6xl hover:text-orange-600"/>
                 </motion.div>
 
-
                 <motion.div 
-                    variants={iconVariants(3)}
+                    variants={iconVariants(2.5)}
                     initial="initial"
                     animate="animate"
                     whileHover={{scale: 1.3}}
@@ -58,6 +57,14 @@ const Technologies = () => {
                     <FaCss3Alt className="text-6xl hover:text-red-700"/>
                 </motion.div>
 
+                <motion.div 
+                    variants={iconVariants(3)}
+                    initial="initial"
+                    animate="animate"
+                    whileHover={{scale: 1.3}}
+                    className="border-neutral-800 p-1">
+                    <FaBootstrap className="text-6xl hover:text-purple-600"/>
+                </motion.div>
 
                 <motion.div 
                     variants={iconVariants(3.5)}

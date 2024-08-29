@@ -70,7 +70,8 @@ const Navbar2 = () => {
       webkitTransition: 'all .5s ease-in-out',
       mozTransition: 'all .5s ease-in-out',
       oTransition: 'all .5s ease-in-out',
-      transition: 'all .5s ease-in-out'
+      transition: 'all .5s ease-in-out',
+      zIndex:100,
     }}>
     <Disclosure as="nav" className="mb-8 bg-slate-900 bg-opacity-80">
       <div className="container mx-auto sm:px-6 lg:px-8">
