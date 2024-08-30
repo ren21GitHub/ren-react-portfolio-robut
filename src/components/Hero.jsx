@@ -37,10 +37,10 @@ const Hero = () => {
                         whileInView="visible"
                         className="my-2 pb-2 font-light tracking-tighter text-justify">
                         {/* {HERO_CONTENT} */}
-                        I’m an IT professional who loves building websites and solving tech problems. I use tools like <span className="text-purple-500 font-bold"> HTML, CSS, JavaScript, ReactJS, NodeJS, PHP, Laravel, and MySQL </span>to create websites that look great and work smoothly. I build different types of websites, including <span className="text-purple-500 font-bold">Static sites, Dynamic ones, Ecommerce stores,</span> and <span className="text-purple-500 font-bold">Landing pages.</span>
+                        I’m an IT professional who loves building websites and solving tech problems. I use tools like <span className="text-purple-500 font-medium"> HTML, CSS, JavaScript, ReactJS, NodeJS, PHP, Laravel, and MySQL </span>to create websites that look great and work smoothly. I build different types of websites, including <span className="text-purple-500 font-medium">Static sites, Dynamic ones, Ecommerce stores,</span> and <span className="text-purple-500 font-medium">Landing pages.</span>
                         <br/>
                         <br/>
-                        I also know programming languages like <span className="text-purple-500 font-bold">Java and C++</span>, and I have experience in IT support and managing systems. My goal is to create simple, user-friendly solutions that make a real difference.
+                        I also know programming languages like <span className="text-purple-500 font-medium">Java and C++</span>, and I have experience in IT support and managing systems. My goal is to create simple, user-friendly solutions that make a real difference.
                     </motion.p>
                     <motion.p 
                         variants={container(1)}
