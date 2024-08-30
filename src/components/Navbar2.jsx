@@ -89,9 +89,9 @@ const Navbar2 = () => {
       <div className="container mx-auto">
         <div className="relative flex h-16 items-center justify-between">
           <motion.div 
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
-            transition={{ type: "spring", stiffness: 300, damping: 17 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
             className={`absolute right-0 mr-6 flex items-center lg:hidden`}>
             {/* Mobile menu button*/}
             <DisclosureButton onClick={() => setIsOpen(!isOpen)} /* Toggle the panel */ className={`group inline-flex items-center justify-center rounded-md p-2 hover:text-purple-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-400`}>
