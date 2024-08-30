@@ -1,4 +1,4 @@
-import { HERO_CONTENT } from "../constants"
+import { HERO_CONTENT, HERO_CONTENT1 } from "../constants"
 import profilePic   from "../assets/ren1x1new1.jpg"
 import { motion } from "framer-motion"
 
@@ -28,15 +28,26 @@ const Hero = () => {
                         variants={container(0.5)}
                         initial="hidden"
                         whileInView="visible"
-                        className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-3xl tracking-tight text-transparent">
+                        className="mb-2 bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-3xl tracking-tight text-transparent">
                         Full Stack Web Developer
                     </motion.span>
                     <motion.p 
                         variants={container(1)}
                         initial="hidden"
                         whileInView="visible"
-                        className="my-2 py-6 font-light tracking-tighter text-justify">
-                        {HERO_CONTENT}
+                        className="my-2 pb-2 font-light tracking-tighter text-justify">
+                        {/* {HERO_CONTENT} */}
+                        I’m an IT professional who loves building websites and solving tech problems. I use tools like <span className="text-purple-500 font-bold"> HTML, CSS, JavaScript, ReactJS, NodeJS, PHP, Laravel, and MySQL </span>to create websites that look great and work smoothly. I build different types of websites, including <span className="text-purple-500 font-bold">Static sites, Dynamic ones, Ecommerce stores,</span> and <span className="text-purple-500 font-bold">Landing pages.</span>
+                        <br/>
+                        <br/>
+                        I also know programming languages like <span className="text-purple-500 font-bold">Java and C++</span>, and I have experience in IT support and managing systems. My goal is to create simple, user-friendly solutions that make a real difference.
+                    </motion.p>
+                    <motion.p 
+                        variants={container(1)}
+                        initial="hidden"
+                        whileInView="visible"
+                        className="my-1 pb-6 font-light tracking-tighter text-justify">
+                        {/* {HERO_CONTENT1} */}
                     </motion.p>
                 </div>
             </div>

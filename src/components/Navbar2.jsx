@@ -116,7 +116,7 @@ const Navbar2 = () => {
                 />
               </a>
             </div>
-            <div className={`w-3/4 hidden absolute pt-2 right-0 flex items-center lg:block`}>
+            <div className={`w-3/4 hidden absolute justify-center right-0 flex items-center lg:block`}>
               <div className="flex space-x-4 justify-end">
                 {navigation.map((item) => (
                   <Link
@@ -130,8 +130,8 @@ const Navbar2 = () => {
                     href={item.href}
 
                     className={classNames(
-                      item.current ? 'bg-gradient-to-r from-pink-500 to-purple-500  text-white' : 'bg-gradient-to-r hover:from-red-500 hover:to-purple-500',
-                      'rounded-sm px-3 py-2 text-md font-small',
+                      item.current ? 'bg-gradient-to-r from-pink-500 to-purple-500  text-white' : ' hover:border-purple-900 hover:border-b-4 pt-4 pb-4',
+                      'px-3 text-md font-small',
                     )}
                   >
                     {item.id}

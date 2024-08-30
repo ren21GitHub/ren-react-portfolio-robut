@@ -3,12 +3,16 @@ import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
 
-export const HERO_CONTENT = `I'm an IT professional who loves building websites and solving tech problems. I work with tools like HTML, CSS, JavaScript, ReactJS, NodeJS, PHP, Laravel, and MySQL to create websites that look great and work well. I’m also familiar with programming languages like Java and C++, and I have experience in IT support and managing systems. My goal is to create simple, user-friendly solutions that make a difference.`;
+// export const HERO_CONTENT = `I'm an IT professional who loves building websites and solving tech problems. I work with tools like HTML, CSS, JavaScript, ReactJS, NodeJS, PHP, Laravel, and MySQL to create websites that look great and work well. I’m also familiar with programming languages like Java and C++, and I have experience in IT support and managing systems. My goal is to create simple, user-friendly solutions that make a difference.`;
+
+export const HERO_CONTENT = `I’m an IT professional who loves building websites and solving tech problems. I use tools like HTML, CSS, JavaScript, ReactJS, NodeJS, PHP, Laravel, and MySQL to create websites that look great and work smoothly. I build different types of websites, including static sites, dynamic ones, ecommerce stores, and landing pages.`;
+
+export const HERO_CONTENT1 = `I also know programming languages like Java and C++, and I have experience in IT support and managing systems. My goal is to create simple, user-friendly solutions that make a real difference.`;
 
 export const ABOUT_TEXT = [
   {
     one: "I am a highly skilled Information Technology professional with a strong background in web development, programming, and system management. My educational journey led me to earn a Bachelor of Science in Information Technology with a major in Web Development from Pamantasan ng Cabuyao in Cabuyao City, Laguna, which has provided me with a solid foundation in the field.",
-    two: "My technical skills include expertise in web development technologies such as HTML, CSS, JavaScript, PHP, ASP.NET, Bootstrap, and Laravel. I am proficient in database management, particularly MySQL, and have experience in creating dynamic and responsive web applications.",
+    two: "My technical skills include expertise in web development technologies such as HTML, CSS, JavaScript, ReactJS, NodeJS, PHP, Laravel, ASP.NET, Bootstrap, and TailwindCSS . I am proficient in database management, particularly MySQL, and have experience in creating dynamic and responsive web applications.",
     three: "Additionally, I am well-versed in several programming languages, including Java, C++, C#, and Visual Basic. I am comfortable working with a variety of development tools such as Visual Studio Code, Sublime, XAMPP, Visual Studio, and Eclipse.",
     four: "My graphic design skills extend to Adobe Photoshop, enabling me to handle tasks related to image manipulation and graphic design. I am also proficient in using Microsoft Office for documentation and presentation purposes.",
     five: "Furthermore, I have a strong background in IT support, including hardware troubleshooting, network cabling, and system management. I have experience in server monitoring using VMware vSphere, PABX monitoring, and familiarity with systems like BPCS (Basic Process Control System) and File Monitoring Systems.",
