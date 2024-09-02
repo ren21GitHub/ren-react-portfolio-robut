@@ -9,6 +9,7 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import ActiveSlider from './components/ActiveSlider'
 import ImageSlider from './components/ImageSlider'
+import ImageSlider2 from './components/ImageSlider2'
 
 
 const App = () => {
@@ -34,6 +35,7 @@ const App = () => {
         {/* <Projects /> */}
         {/* <ActiveSlider /> */}
         <ImageSlider/>
+        {/* <ImageSlider2 /> */}
         <Contact />
       </div>
     </div>

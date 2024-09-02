@@ -24,50 +24,20 @@ const ImageSlider = () => {
   ]
 
   const imageVariants = {
-    center: {x: '0',
-      scale: 1,
-      zIndex: 5,
-    },
-    left1: {x: '-40%',
-      scale: 0.7,
-      zIndex: 3,
-    },
-    left: {x: '-70%',
-      scale: 0.5,
-      zIndex: 2,
-    },
-    right: {x: '70%',
-      scale: 0.5,
-      zIndex: 1,
-    },
-    right1: {x: '40%',
-      scale: 0.7,
-      zIndex: 3,
-    }
-  }
+    center: { x: '0%', scale: 1, zIndex: 5 },
+    left1: { x: '-40%', scale: 0.7, zIndex: 3 },
+    left: { x: '-70%', scale: 0.5, zIndex: 2 },
+    right: { x: '70%', scale: 0.5, zIndex: 1 },
+    right1: { x: '40%', scale: 0.7, zIndex: 3 },
+  };
 
   const imageVariants1 = {
-    center: {x: '0',
-      scale: 1,
-      zIndex: 5,
-    },
-    left1: {x: '-40%',
-      scale: 0.7,
-      zIndex: 3,
-    },
-    left: {x: '-70%',
-      scale: 0.5,
-      zIndex: 2,
-    },
-    right: {x: '0',
-      scale: 0.5,
-      zIndex: 1,
-    },
-    right1: {x: '0',
-      scale: 0.7,
-      zIndex: 3,
-    }
-  }
+    center: { x: '0%', scale: 1, zIndex: 5 },
+    left1: { x: '0%', scale: 0.85, zIndex: 3 },
+    left: { x: '0%', scale: 0.75, zIndex: 2 },
+    right: { x: '0%', scale: 0.75, zIndex: 1 },
+    right1: { x: '0%', scale: 0.85, zIndex: 3 },
+  };
 
   const [width, setWidth] = useState('50%');
   const [height, setHeight] =useState(true);
@@ -79,7 +49,7 @@ const ImageSlider = () => {
       const screenWidth = window.innerWidth;
 
       // Set the width value based on the screen width
-      if (screenWidth <= 700) {
+      if (screenWidth < 1024) {
         setWidth('100%');
         setHeight(true);
       } else {
@@ -107,7 +77,7 @@ const ImageSlider = () => {
             initial={{y:-50, opacity:0}}
             whileInView={{y:0, opacity:1}}
             transition={{duration: 1.5}}
-            className="text-center text-4xl">Projects</motion.h1>
+            className="z-20 text-center text-4xl">Projects</motion.h1>
             
       {ServiceData.map((image, index)=>(
           <motion.img
@@ -115,7 +85,7 @@ const ImageSlider = () => {
             src={image.backgroundImage}
             alt={image.backgroundImage}
 
-            variants={window.innerWidth <= 700? imageVariants1:imageVariants}
+            variants={window.innerWidth < 1024? imageVariants1:imageVariants}
             initial="center"
             animate={positions[positionIndexes[index]]}
             transition={{duration: 0.5}}
@@ -141,7 +111,7 @@ const ImageSlider = () => {
        whileHover={{ scale: 1.2 }}
        whileTap={{ scale: 0.9 }}
        transition={{ type: "spring", stiffness: 400, damping: 17 }}
-       className={`group relative flex text-white rounded text-1xl ${height ? "mt-[350px]" : "mt-[550px]"} bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-purple-500  py-2 px-4`} onClick={handleNext} >Next <RxArrowTopRight className="pl-1 text-2xl hover:rotate-45 duration-100" />
+       className={`z-20 group relative flex text-white rounded text-1xl ${height ? "mt-[350px]" : "mt-[550px]"} bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-purple-500  py-2 px-4`} onClick={handleNext} >Next <RxArrowTopRight className="pl-1 text-2xl hover:rotate-45 duration-100" />
       </motion.button>
 
     </div>
